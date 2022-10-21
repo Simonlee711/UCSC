@@ -1,6 +1,11 @@
 # CSE 12/L: Computer Systems and Assembly Language and Lab (Professor Sagnik Nath)
 
+**Course Taken: Winter 2020**
+
 Some Projects I made in MIPS/ MultiMedia Logic in CSE 12 at UCSC during the Winter Quarter 2021
+
+
+### assignments
 
 - Lab 0: No Cheating agreement
 - Lab 1: Logic Circuits (MMLogic)
