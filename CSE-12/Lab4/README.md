@@ -1,7 +1,9 @@
-Simon Lee
-siaulee
-Winter 2021
-Lab 4: Syntax Checker
+# Lab 4
+
+Simon Lee </br>
+siaulee </br>
+Winter 2021 </br>
+Lab 4: Syntax Checker </br>
 
 -----------------------
 DESCRIPTION
