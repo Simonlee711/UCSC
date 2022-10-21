@@ -16,4 +16,6 @@ Below I will have a list of the classes and their titles:
 - CSE 20: Beginning Programming in Python (Dr. Larissa Munishkina)
 - CSE 30: Programming Abstractions: Python 
 - MATH 134: Cryptography (Dr. Philip Barron)
+- Miscallaneous
+- Research Projects
 
