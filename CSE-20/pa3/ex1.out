@@ -1,0 +1,54 @@
+Welcome to Calculator Program!
+Please choose one of the following operations:
+Addition - A            
+Subtraction - S
+Multiplication - M
+Division - D
+>
+You chose addition.
+Please enter the first number:
+The first number is 5.
+Please enter the second number:
+The second number is 8.
+5 + 8 = 13
+Do you want to continue? [Y/N]:
+Please choose one of the following operations:
+Addition - A            
+Subtraction - S
+Multiplication - M
+Division - D
+>
+You chose subtraction.
+Please enter the first number:
+The first number is 2.
+Please enter the second number:
+The second number is 9.
+2 - 9 = -7
+Do you want to continue? [Y/N]:
+Please choose one of the following operations:
+Addition - A            
+Subtraction - S
+Multiplication - M
+Division - D
+>
+You chose multiplication.
+Please enter the first number:
+The first number is 5.
+Please enter the second number:
+The second number is 7.
+5 x 7 = 35
+Do you want to continue? [Y/N]:
+Please choose one of the following operations:
+Addition - A            
+Subtraction - S
+Multiplication - M
+Division - D
+>
+You chose division.
+Please enter the first number:
+The first number is 11.
+Please enter the second number:
+The second number is 2.
+11 / 2 = 5.5
+Do you want to continue? [Y/N]:
+Goodbye!

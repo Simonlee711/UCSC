@@ -1,0 +1,140 @@
+#! /bin/bash
+# eval_pa2 - grades PA2 performance and specification
+#
+
+EXITCODE=0
+SOURCES="guess.py"
+COMMENTS="author date file input output"
+CHECKS="while-loop for-loop if-else elif"
+MAINSOURCE="guess_fixed.py"
+DATA="ex1 ex2"
+MAIN=python3
+REPORT=grade
+GRADE=0
+
+echo "
+Programming Assignment 2
+**********************************
+Specification :" > $REPORT
+
+#
+# checks files by filenames
+#
+for f in $SOURCES
+do 
+    if [ -e $f -a -s $f ]
+    then
+        echo "$f is present +5 points" >> $REPORT
+        ((GRADE = GRADE + 5))
+    else
+    echo "$f is named incorrectly or absent +0 points" >> $REPORT
+        
+    fi
+    for c in $COMMENTS
+    do
+        grep -i "#*$c" $f > comments
+        if [ -e comments -a $(wc -l < comments) -eq 0 ]
+        then
+            echo "$f does not have a comment $c +0 points" >> $REPORT
+        else
+            echo "$f has a comment $c +1 points" >> $REPORT
+            ((GRADE = GRADE + 1))
+        fi
+    done
+done
+
+#
+# checks loops and conditional statements  
+#
+
+echo "
+**********************************
+Loops and Conditional Statements :" >> $REPORT
+
+    for k in $CHECKS
+    do
+        if [ $k == "while-loop" ]
+        then
+            grep -i "while .*:" $f > checks
+        elif [ $k == "for-loop" ]
+        then
+            grep -i "for .*:" $f > checks
+        elif [ $k == "if-else" ]
+        then
+            grep -i "else *:" $f > checks
+        else
+            grep -i "elif .*:" $f > checks
+        fi
+        
+        if [ -e checks -a $(wc -l < checks) -eq 0 ]
+        then
+            echo "$f does not have $k +0 points" >> $REPORT
+        else
+            echo "$f has $k +3 points" >> $REPORT
+            ((GRADE = GRADE + 3))
+        fi
+    done
+
+echo "
+**********************************
+Performance :" >> $REPORT
+
+#
+# checks main application
+#
+if [ -e $SOURCES ]
+then
+
+#
+# replace randint() with 3 in $SOURCES
+#
+    sed 's/randint *(1, *10)/3/g' $SOURCES > $MAINSOURCE
+
+#
+# checks output
+#   
+    for e in $DATA
+    do
+        $MAIN $MAINSOURCE < $e > output 2> errors_$e &
+    PID=$!
+    sleep 2
+    kill -KILL $PID 2> /dev/null
+    echo >> $REPORT
+    echo "for input file $e:" >> $REPORT
+        if [ -e output -a $(wc -l < errors_$e) -eq 0 ]
+        then
+            echo "$SOURCES runs without errors +10 points" >> $REPORT
+            ((GRADE = GRADE + 10))
+        else
+            echo "$SOURCES does not run correctly +0 points" >> $REPORT
+        fi
+
+        diff -wB output $e.out >& dif_$e
+        if [ -e output -a $(wc -l < dif_$e) -eq 0 ]
+        then
+            echo "output is correct +9 points" >> $REPORT
+            ((GRADE = GRADE + 9))
+        else
+            echo "output is incorrect +0 points" >> $REPORT
+        fi
+ 
+    done
+else
+    echo "$SOURCES not implemented +0 points" >> $REPORT
+fi
+
+#
+# prints grade
+# 
+                echo "
+**********************************
+Your grade is $GRADE out of 60 
+
+        
+" >> $REPORT
+
+cat $REPORT
+echo $GRADE > tmp
+rm output comments checks 
+
+exit $EXITCODE

@@ -1,0 +1,49 @@
+
+Programming Assignment 4
+**********************************
+Specification :
+cipher.py is present +3 points
+cipher.py has a comment author +1 points
+cipher.py has a comment date +1 points
+cipher.py has a comment file +1 points
+cipher.py has a comment input +1 points
+cipher.py has a comment output +1 points
+
+**********************************
+Loops and Conditionals :
+cipher.py has while-loops +3 points
+cipher.py has conditionals +3 points
+
+**********************************
+Files, Exceptions, List and String Methods :
+cipher.py has exceptions +3 points
+cipher.py has file-methods +3 points
+cipher.py has string-methods +3 points
+cipher.py has list-methods +3 points
+
+**********************************
+Functions:
+cipher.py has the method readfile +1 point
+cipher.py has the method writefile +1 point
+cipher.py has the method decode +1 point
+cipher.py has the method to_string +1 point
+
+**********************************
+Performance :
+
+for input file ex1:
+cipher.py does not run correctly +0 points
+      - errors can be seen in file errors_ex1
+output is incorrect +0 points
+      - differences can be seen in file dif_ex1
+
+for input file ex2:
+cipher.py runs without errors for decoding +7 points
+output is incorrect +0 points
+      - differences can be seen in file dif_ex2
+
+**********************************
+Your grade is 37 out of 60 
+
+        
+

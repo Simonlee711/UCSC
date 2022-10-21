@@ -1,0 +1,30 @@
+1d0
+< Would you like to encode or decode the message?
+2a2
+> Would you like to encode or decode the message?
+5c5,8
+< File cannot be opened
+---
+> Please enter a file for writing: 
+> 
+> Plaintext:
+> HELLO! HOW ARE YOU?
+6a10,14
+> Ciphertext:
+> KHOOR! KRZ DUH BRX?
+> 
+> Would you like to encode or decode the message?
+> Type E to encode, D to decode, or Q to quit: 
+7a16,27
+> Please enter a file for writing: 
+> 
+> Ciphertext:
+> KHOOR! KRZ DUH BRX?
+> 
+> Plaintext:
+> HELLO! HOW ARE YOU?
+> 
+> Would you like to encode or decode the message?
+> Type E to encode, D to decode, or Q to quit: 
+> 
+> Goodbye!

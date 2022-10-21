@@ -1,0 +1,172 @@
+#! /bin/bash
+# eval_pa3 - grades PA3 performance and specifications
+#
+
+EXITCODE=0
+SOURCES="calculator.py"
+COMMENTS="author date file input output"
+declare -a FUNCTIONS=("def format" "def add" "def subtract" "def multiply" "def divide")
+CHECKS="while-loop if-else elif"
+DATA="ex1 ex2"
+MAIN=python3
+REPORT=grade
+GRADE=0
+
+echo "
+Programming Assignment 3
+**********************************
+Specification :" > $REPORT
+
+#
+# checks files by filenames
+#
+for f in $SOURCES
+do 
+    if [ -e $f -a -s $f ]
+    then
+        echo "$f is present +3 points" >> $REPORT
+        ((GRADE = GRADE + 3))
+    else
+    echo "$f is named incorrectly or absent +0 points" >> $REPORT
+        
+    fi
+    for c in $COMMENTS
+    do
+        grep -i "#*$c" $f > comments
+        if [ -e comments -a $(wc -l < comments) -eq 0 ]
+        then
+            echo "$f does not have a comment $c +0 points" >> $REPORT
+        else
+            echo "$f has a comment $c +1 points" >> $REPORT
+            ((GRADE = GRADE + 1))
+        fi
+    done
+
+#
+# checks loops and conditional statements 
+#
+
+echo "
+**********************************
+Loops and Conditionals :" >> $REPORT
+
+    for k in $CHECKS
+    do
+        if [ $k == "while-loop" ]
+        then
+            grep -i "\bwhile\b.*:" $f > checks
+        elif [ $k == "if-else" ]
+        then
+            grep -i "\belse\b *:" $f > checks
+        else
+            grep -i "\belif\b.*:" $f > checks
+        fi
+        
+        if [ -e checks -a $(wc -l < checks) -eq 0 ]
+        then
+            echo "$f does not have $k +0 points" >> $REPORT
+        else
+            echo "$f has $k +3 points" >> $REPORT
+            ((GRADE = GRADE + 3))
+        fi
+    done
+
+#
+# checks for each function name, 2pts each :  
+#
+
+echo "
+**********************************
+Uses Functions :" >> $REPORT
+
+    for k in "${FUNCTIONS[@]}"
+    do
+        grep -i "$k" $f > functions
+        if [ -e functions -a $(wc -l < functions) -eq 0 ]
+        then
+            echo "$f does not have function $k +0 points" >> $REPORT
+        else
+            echo "$f has function $k +2 points" >> $REPORT
+            ((GRADE = GRADE + 2))
+        fi
+    done
+done
+
+echo "
+**********************************
+Performance :" >> $REPORT
+
+#
+# checks main application
+#
+if [ -e $SOURCES ]
+then
+
+
+#
+# checks output
+#   
+    for e in $DATA
+    do
+        $MAIN $SOURCES < $e > output 2> errors_$e &
+    PID=$!
+    sleep 2
+    kill -KILL $PID 2> /dev/null
+    echo >> $REPORT
+    echo "for input file $e:" >> $REPORT
+        if [ -e output -a $(wc -l < errors_$e) -eq 0 ]
+        then
+            if [ "$e" == "ex1" ]
+            then
+                echo "$SOURCES runs without errors for simple, properly formated types of input +20 points" >> $REPORT
+                ((GRADE = GRADE + 10))
+            else
+                echo "$SOURCES runs without errors for for all formats of string input, has correct error handling +10 points" >> $REPORT
+                ((GRADE = GRADE + 9))
+            fi
+        else
+            if [ "$e" == "ex1" ]
+            then
+                echo "$SOURCES does not run correctly for simple, properly formated types of input +0 points" >> $REPORT
+                echo "      - errors can be seen in file errors_ex1" >> $REPORT
+            else
+                echo "$SOURCES does not run correctly for all formats of string input +0 points" >> $REPORT
+                echo "      - errors can be seen in file errors_ex2" >> $REPORT
+            fi
+        fi
+
+        diff -wB output $e.out >& dif_$e
+        if [ -e output -a $(wc -l < dif_$e) -eq 0 ]
+        then
+            echo "output is correct +7 points" >> $REPORT
+            ((GRADE = GRADE + 7))
+        else
+            echo "output is incorrect +0 points" >> $REPORT
+            if [ "$e" == "ex1" ]
+            then
+                echo "      - differences can be seen in file dif_ex1" >> $REPORT
+            else
+                echo "      - differences can be seen in file dif_ex2" >> $REPORT
+            fi
+        fi
+ 
+    done
+else
+    echo "$SOURCES not implemented +0 points" >> $REPORT
+fi
+
+#
+# prints grade
+# 
+                echo "
+**********************************
+Your grade is $GRADE out of 60 
+
+        
+" >> $REPORT
+
+cat $REPORT
+echo $GRADE > tmp
+rm output comments checks functions
+    
+exit $EXITCODE

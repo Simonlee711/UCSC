@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "cipher.py", line 123, in <module>
+    message = readfile()
+  File "cipher.py", line 23, in readfile
+    return message
+UnboundLocalError: local variable 'message' referenced before assignment

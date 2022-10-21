@@ -1,0 +1,27 @@
+
+Would you like to encode or decode the message?
+Type E to encode, D to decode, or Q to quit: 
+Please enter a file for reading: 
+Please enter a file for writing: 
+
+Plaintext:
+HELLO! HOW ARE YOU?
+
+Ciphertext:
+KHOOR! KRZ DUH BRX?
+
+Would you like to encode or decode the message?
+Type E to encode, D to decode, or Q to quit: 
+Please enter a file for reading: 
+Please enter a file for writing: 
+
+Ciphertext:
+KHOOR! KRZ DUH BRX?
+
+Plaintext:
+HELLO! HOW ARE YOU?
+
+Would you like to encode or decode the message?
+Type E to encode, D to decode, or Q to quit: 
+
+Goodbye!

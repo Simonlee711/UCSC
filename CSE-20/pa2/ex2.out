@@ -1,0 +1,23 @@
+Play a game: Guess My Number
+
+You have three attempts to guess my number.
+
+Please enter a number from 1 to 10: 
+You guessed right. My number is 3. Congratulations you won!
+
+Would you like to play again [Y/N]? 
+You have three attempts to guess my number.
+
+Please enter a number from 1 to 10: 
+You guessed wrong. Your number is smaller than mine.
+
+Guess again. Please enter a number: 
+You guessed wrong. Your number is bigger than mine.
+
+Guess again. Please enter a number: 
+You guessed wrong. Your number is smaller than mine.
+
+Sorry, you lost. My number is 3.
+
+Would you like to play again [Y/N]? 
+Goodbye!

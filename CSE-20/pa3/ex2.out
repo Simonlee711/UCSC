@@ -1,0 +1,75 @@
+Welcome to Calculator Program!
+Please choose one of the following operations:
+Addition - A            
+Subtraction - S
+Multiplication - M
+Division - D
+>
+You chose addition.
+Please enter the first number:
+You did not choose a number.
+Please enter the first number:
+You did not choose a number.
+Please enter the first number:
+You did not choose a number.
+Please enter the first number:
+You did not choose a number.
+Please enter the first number:
+The first number is 5.
+Please enter the second number:
+The second number is 2.
+5 + 2 = 7
+Do you want to continue? [Y/N]:
+Please choose one of the following operations:
+Addition - A            
+Subtraction - S
+Multiplication - M
+Division - D
+>
+You chose subtraction.
+Please enter the first number:
+The first number is -1.23.
+Please enter the second number:
+The second number is 1.
+-1.23 - 1 = -2.23
+Do you want to continue? [Y/N]:
+Please choose one of the following operations:
+Addition - A            
+Subtraction - S
+Multiplication - M
+Division - D
+>
+You chose multiplication.
+Please enter the first number:
+The first number is -1.2.
+Please enter the second number:
+The second number is 0.
+-1.2 x 0 = 0
+Do you want to continue? [Y/N]:
+Please choose one of the following operations:
+Addition - A            
+Subtraction - S
+Multiplication - M
+Division - D
+>
+You chose division.
+Please enter the first number:
+The first number is -1.
+Please enter the second number:
+The second number is 0.
+The division by zero is prohibited!
+Do you want to continue? [Y/N]:
+Please choose one of the following operations:
+Addition - A            
+Subtraction - S
+Multiplication - M
+Division - D
+>
+You chose division.
+Please enter the first number:
+The first number is -1.
+Please enter the second number:
+The second number is -2.
+-1 / -2 = 0.5
+Do you want to continue? [Y/N]:
+Goodbye!

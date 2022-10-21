@@ -1,0 +1,41 @@
+
+Programming Assignment 3
+**********************************
+Specification :
+calculator.py is present +3 points
+calculator.py has a comment author +1 points
+calculator.py has a comment date +1 points
+calculator.py has a comment file +1 points
+calculator.py has a comment input +1 points
+calculator.py has a comment output +1 points
+
+**********************************
+Loops and Conditionals :
+calculator.py has while-loop +3 points
+calculator.py has if-else +3 points
+calculator.py has elif +3 points
+
+**********************************
+Uses Functions :
+calculator.py has function def format +2 points
+calculator.py has function def add +2 points
+calculator.py has function def subtract +2 points
+calculator.py has function def multiply +2 points
+calculator.py has function def divide +2 points
+
+**********************************
+Performance :
+
+for input file ex1:
+calculator.py runs without errors for simple, properly formated types of input +20 points
+output is correct +7 points
+
+for input file ex2:
+calculator.py runs without errors for for all formats of string input, has correct error handling +10 points
+output is correct +7 points
+
+**********************************
+Your grade is 60 out of 60 
+
+        
+

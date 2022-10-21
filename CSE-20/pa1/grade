@@ -1,0 +1,34 @@
+
+Programming Assignment 1
+**********************************
+Specification :
+hello.py is present +5 points
+hello.py has a comment author +1 points
+hello.py has a comment date +1 points
+hello.py has a comment file +1 points
+hello.py has a comment input +1 points
+hello.py has a comment output +1 points
+
+**********************************
+Integer and String Casting, String Concatenation and Formatting :
+hello.py has integer-casting +5 points
+hello.py has string-casting +5 points
+hello.py has string-concatenation +5 points
+hello.py has string-formatting +5 points
+
+**********************************
+Performance :
+
+for input file ex1:
+hello.py runs without errors +10 points
+output is correct +5 points
+
+for input file ex2:
+hello.py runs without errors +10 points
+output is correct +5 points
+
+**********************************
+Your grade is 60 out of 60 
+
+        
+

@@ -1,0 +1,209 @@
+#! /bin/bash
+# eval_pa4 - grades pa4 performance and specifications
+#
+
+EXITCODE=0
+SOURCES="cipher.py"
+COMMENTS="author date file input output"
+CHECKS="while-loops conditionals"
+METHODS="exceptions file-methods string-methods list-methods"
+FUNCTIONS="readfile writefile decode to_string"
+DATA="ex1 ex2"
+MAIN=python3
+MAINSOURCE="cipher.py"
+REPORT=grade
+GRADE=0
+
+echo "
+Programming Assignment 4
+**********************************
+Specification :" > $REPORT
+
+#
+# checks files by filenames
+#
+for f in $SOURCES
+do 
+    if [ -e $f -a -s $f ]
+    then
+        echo "$f is present +3 points" >> $REPORT
+        ((GRADE = GRADE + 3))
+    else
+    echo "$f is named incorrectly or absent +0 points" >> $REPORT
+        
+    fi
+
+#
+# checks comment blocks
+#
+    for c in $COMMENTS
+    do
+        grep -i "#.*\b$c" $f > comments
+        if [ -e comments -a $(wc -l < comments) -eq 0 ]
+        then
+            echo "$f does not have a comment $c +0 points" >> $REPORT
+        else
+            echo "$f has a comment $c +1 points" >> $REPORT
+            ((GRADE = GRADE + 1))
+        fi
+    done
+
+#
+# checks loops and conditional statements  
+#
+
+echo "
+**********************************
+Loops and Conditionals :" >> $REPORT
+
+    for k in $CHECKS
+    do
+        if [ $k == "while-loops" ]
+        then
+            grep -i "\bwhile\b.*:" $f > checks
+        elif [ $k == "conditionals" ]
+        then
+            grep -i "\belse\b *:" $f > checks
+        else
+            grep -i "\belif\b.*:" $f > checks
+        fi
+        
+        if [ -e checks -a $(wc -l < checks) -eq 0 ]
+        then
+            echo "$f does not have $k +0 points" >> $REPORT
+        else
+            echo "$f has $k +3 points" >> $REPORT
+            ((GRADE = GRADE + 3))
+        fi
+    done
+
+#
+# checks list, dictionary, string, and file methods 
+#
+
+echo "
+**********************************
+Files, Exceptions, List and String Methods :" >> $REPORT
+
+    for k in $METHODS
+    do
+        if [ $k == "lists" ]
+        then
+            grep -i "= *\[\]" $f > methods
+            grep -i "\.append *(" $f >> methods
+        elif [ $k == "string-methods" ]
+        then
+            grep -i "\.upper *(" $f > methods
+            grep -i "\.join *(" $f >> methods
+            grep -i "\.isalpha *(" $f >> methods
+            grep -i "\.split *(" $f >> methods
+        elif [ $k == "file-methods" ]
+        then
+            grep -i "\bopen *(" $f > methods
+        else
+            grep -i "\bexcept\b.*:" $f > methods
+        fi
+        
+        if [ -e methods -a $(wc -l < methods) -eq 0 ]
+        then
+            echo "$f does not have $k +0 points" >> $REPORT
+        else
+            echo "$f has $k +3 points" >> $REPORT
+            ((GRADE = GRADE + 3))
+        fi
+    done
+
+#
+# checks function names in cipher.py
+#
+
+echo "
+**********************************
+Functions:" >> $REPORT
+
+    for k in $FUNCTIONS
+    do
+        grep -i "def *\b$k\b.*:" $f > methods
+        if [ -e methods -a $(wc -l < methods) -eq 0 ]
+        then
+            echo "$f does not have the method $k" >> $REPORT
+        else
+            echo "$f has the method $k +1 point" >> $REPORT
+            ((GRADE = GRADE + 1))
+        fi
+    done
+done
+
+echo "
+**********************************
+Performance :" >> $REPORT
+
+#
+# checks main application
+#
+if [ -e $MAINSOURCE ]
+then
+
+
+#
+# checks output
+#   
+    for e in $DATA
+    do
+        $MAIN $MAINSOURCE < $e > output_$e 2> errors_$e &
+    PID=$!
+    sleep 2
+    kill -KILL $PID 2> /dev/null
+    echo >> $REPORT
+    echo "for input file $e:" >> $REPORT
+        if [ -e output_$e -a $(wc -l < errors_$e) -eq 0 ]
+        then
+            if [ "$e" == "ex1" ]
+            then
+                echo "$SOURCES runs without errors for encoding +8 points" >> $REPORT
+                ((GRADE = GRADE + 8))
+            else
+                echo "$SOURCES runs without errors for decoding +7 points" >> $REPORT
+                ((GRADE = GRADE + 7))
+            fi
+        else
+            echo "$MAINSOURCE does not run correctly +0 points" >> $REPORT
+            echo "      - errors can be seen in file errors_$e" >> $REPORT   
+        fi
+
+        diff -wB output_$e $e.out >& dif_$e
+        if [ -e output_$e -a $(wc -l < dif_$e) -eq 0 ]
+        then
+            if [ "$e" == "ex1" ]
+            then
+                echo "output is correct +8 points" >> $REPORT
+                ((GRADE = GRADE + 8))
+            else
+                echo "output is correct +7 points" >> $REPORT
+                ((GRADE = GRADE + 7))
+            fi
+        else
+            echo "output is incorrect +0 points" >> $REPORT
+            echo "      - differences can be seen in file dif_$e" >> $REPORT
+        fi
+ 
+    done
+else
+    echo "$MAINSOURCE is not implemented +0 points" >> $REPORT
+fi
+
+#
+# prints grade
+# 
+                echo "
+**********************************
+Your grade is $GRADE out of 60 
+
+        
+" >> $REPORT
+
+cat $REPORT
+echo $GRADE > tmp
+rm comments checks methods
+    
+exit $EXITCODE
