@@ -1,2 +1,10 @@
-# Assembly-Language-MIPS-MultiMedia-Logic-CSE-12-UCSC
-Some Projects I made in MIPS/ MultiMedia Logic in CSE 12 - Computer logic & Architecture at UCSC during the Winter Quarter 2021
+# CSE 12/L: Computer Systems and Assembly Language and Lab (Professor Sagnik Nath)
+
+Some Projects I made in MIPS/ MultiMedia Logic in CSE 12 at UCSC during the Winter Quarter 2021
+
+- Lab 0: No Cheating agreement
+- Lab 1: Logic Circuits (MMLogic)
+- Lab 2: Storage of Hexidecimal Digits in 4 registers (MMLogic)
+- Lab 3: Printing Stars in a pyramid (MIPS)
+- Lab 4: Syntax Checker for braces, parantheses, and brackets (MIPS)
+- Lab 5: Computer graphics, Drawing a design using assembly language (MIPS)
