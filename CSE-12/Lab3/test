@@ -1,0 +1,8 @@
+li $s0 0
+jal sub1
+addi $s0 $s0 10
+j Exit
+sub0: nop
+addiu $s0 $s0 5
+jr $ra
+sub1: 
