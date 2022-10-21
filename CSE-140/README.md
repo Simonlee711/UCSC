@@ -1,5 +1,7 @@
 #  CSE 140: Artificial Intelligence (Professor Leilani Gilpin)
 
+**Course Taken: Spring 2022**
+
 - Artificial Intellegence Class based on UC Berkeley Pacman Projects
 
 ### Assignments

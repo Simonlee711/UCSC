@@ -1,5 +1,7 @@
 # BME 160/L: Research Programming in the Life Sciences (Dr. David Bernick)
 
+**Course Taken: Winter 2022**
+
 - Intro-to-Bioinformatics course where we worked on various computation problems in biology
 
 ### Assignments
