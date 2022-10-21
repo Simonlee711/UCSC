@@ -1,0 +1,14 @@
+5 - 1/1
+6a - 2/2
+6b - 2/2
+6c - 2/2
+6d - 2/2
+6e - 1/2 this counts duplicates from using the wrong input file, but also coutns first names. The starts with operator ^ in grep would have been useful here.
+6f - 2/2 not using ^ as before - regrade 6f
+7 - 1/1 missing $AM129_PATH
+8 - 2/3 extra output from cd - command
+9 - 3/3
+
+17/20
+
+New Grade: 18/20

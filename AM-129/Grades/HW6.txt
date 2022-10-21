@@ -1,0 +1,23 @@
+Sparse matrix-vector product (4 points)
+	2/2 Check that the bounds on the loops are right
+	2/2 Check that indexing into x is done correctly
+	1/1 Check that y[i] is zeroed before the sum starts 
+
+2/2 Setting up work vectors
+2/2 Setting number of non-zeros
+
+Filling matrix (4 points)
+	2/2 Check that the column ids and values are passed correctly (regardless of their contents)
+	1/1 Verify that the column ids are {i-1,i,i+1}
+	1/1 Verify that the values are right
+
+Plotting (3 points)
+	3/3
+Report (5 points)
+	1/1 Discussion on different grid resolutions, utility of sparse structure
+	1/1 Describing the internals of the data structure
+	1/1 Explaining O(N) complexity
+	2/2 Check that the figure is present
+
+20/20
+Great job! I always enjoy reading your reports. Thanks for all the great work this quarter.

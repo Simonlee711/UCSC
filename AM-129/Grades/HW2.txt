@@ -1,0 +1,17 @@
+Code -
+1/1 - Code compiles and runs
+6/6 - Functions/Subroutines in module written correctly
+2/2 - Main program is setup correctly
+4/4 - Main program does 5-7 correctly and reports the correct errors.
+
+Report -
+3/3 - Deliverables (1,2,3,6) - elemental applies the function to all elements in an array.
+      		   	     - Although they are both function keywords, they are not related, you can use one, both or neither.
+
+1/1 - Deliverable 4
+1/1 - Delivarable 5
+2/2 - Conclusion
+
+Total -
+20/20
+Great job!

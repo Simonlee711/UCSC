@@ -1,0 +1,13 @@
+Code 14 points total
+	3/4 build and rebuild functions work and pop in/out of the mathieu directory correctly
+		-1 hard coded path
+	4/4 generate_input sets all three lines correctly
+	2/2 Backup init file set correctly
+	4/4 Plot well formatted and correctly re-scaled
+Report 6 points total
+	2/2 Figure included in report
+	2/2 Discussion on layout and purpose of code
+	2/2 Discussion on non-hardcoding the q-range, and interactive use
+
+Total
+19/20

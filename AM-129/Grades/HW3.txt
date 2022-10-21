@@ -1,0 +1,22 @@
+Pi approximation (7 total)
+- 2/2 Main loop looks correct
+- 1/1 it compiles
+- 2/2 Correctly using double precision
+- 2/2 correct term counts and error levels. -1 if you have to 	recompile for different thresholds.
+
+Debugging (7 total)
+- 2/2 it compiles
+- 1/2 it compiles without warning
+    Illegal preprocessor directive
+- 1/1 provides correct answer
+- 2/2 correct answer for transposed system
+
+Report (6 total)
+- 1/1 Term counts and errors
+- 1/1 Explaining chosen flags and purpose of make file
+- 1/1 commentary on convergence rate
+- 2/2 debugging strategy and flags
+- 1/1 for discussion of NxN version
+
+Great job and thanks for a very thoughtful report!
+19/20

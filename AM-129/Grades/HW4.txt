@@ -1,0 +1,19 @@
+Histogram code and figure (8 points total):
+1/1 - Dictionary is used 'correctly'
+2/2 - Right counts and number of codons,
+2/2 - Plot is generated automatically and written out as a png
+3/3 - Plot formatting is decent, at a minimum ticka, labels, title, and grid present.
+
+Density plot and code (8 points total):
+3/3 - Lines look plausible
+2/2 - Conversion to a fraction instead of integer counts
+3/3 - Figure formatted well, title, legend, labels, grid
+
+Report (4 points total)
+1/1 count('ata') will mis-count overlapping codons and under-report the true value
+2/2 Figures in report
+1/1 Commentary on larger window
+
+
+Total - 20/20
+Very nice report!
