@@ -6,10 +6,10 @@
 
 Contains Homework Links so you can run the code
 
-- Project 1: Search in Pacamn [http://sozopol.soe.ucsc.edu/p1/instructions/index.html]
-- Project 2: Multi-Agent Pac-Man [http://sozopol.soe.ucsc.edu/p2/instructions/index.html]
-- Project 3: Reinforcement Learning [http://sozopol.soe.ucsc.edu/p3/instructions/index.html]
-- Project 4: Capture the Flag [http://sozopol.soe.ucsc.edu/p4/instructions/index.html]
+- Project 1: [Search in Pacamn](http://sozopol.soe.ucsc.edu/p1/instructions/index.html)
+- Project 2: [Multi-Agent Pac-Man](http://sozopol.soe.ucsc.edu/p2/instructions/index.html)
+- Project 3: [Reinforcement Learning](http://sozopol.soe.ucsc.edu/p3/instructions/index.html)
+- Project 4: [Capture the Flag](http://sozopol.soe.ucsc.edu/p4/instructions/index.html)
 
 
 ---
