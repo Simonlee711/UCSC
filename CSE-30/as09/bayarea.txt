@@ -1,0 +1,20 @@
+1	Home
+2	Crystal-Ranch-Enterance
+3	Lime-Ridge-top
+4	Orchards-Shopping-Complex
+5	Diablo Shadows
+6	Arborlado-Drive
+7	Arbolado-Park
+8	Northgate-High-School
+9	Heather-Farms-Park
+10	Downtown-Walnut-Creek
+11	Las-Lomas
+12	Bancroft
+13	Kohls
+14	Pleasant-Hill
+15	Sunvalley-Mall
+16	Concord
+17	Clayton-Road
+18	Treat-Blvd
+19 	Foothill-Middle-School
+20	Mateo-Ashley's-House
