@@ -2,7 +2,7 @@
 
 **Course Taken: Winter 2020**
 
-Some Projects I made in MIPS/ MultiMedia Logic in CSE 12 at UCSC during the Winter Quarter 2021
+- Some Projects I made in MIPS/ MultiMedia Logic in CSE 12 at UCSC during the Winter Quarter 2021
 
 
 ### assignments
