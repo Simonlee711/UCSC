@@ -5,7 +5,7 @@
 - Repository to hold CSE13S work. I took CSE13S in Spring Quarter 2021 at UC Santa Cruz with Professor Darrell Long. Here is a guide of what to expect in each directory and how to run each one will be in each README.md in the selected repositories. 
 
 
-### assignments
+### Assignments
 
 
 - asgn0: Hello World
